@@ -33,9 +33,8 @@ IoU tính trên union polygon theo từng area_type, tọa độ liên tục. Kh
 
 ## Cần bổ sung để hoàn tất
 
-1. Export CVAT cuối sau review (hoặc xác nhận không chỉnh bất kỳ polygon/attribute/tag nào).
-2. Quyết định cụ thể cho các bất đồng: mã ảnh, chọn cách nào, lý do/rule, cờ nào được giữ hoặc giải quyết.
-3. Các export độc lập còn lại nếu có. Không tạo file mang tên thành viên bằng cách sao chép AI output.
-4. Tên nhóm peer; sau handoff cần export, clarification log và feedback thật để chấm GTS và viết v3.
+1. Export CVAT cuối sau review vẫn nên lưu nếu có; bản consensus được giữ rõ nguồn AI-assisted.
+2. Các export độc lập còn lại nếu có. Không tạo file mang tên thành viên bằng cách sao chép AI output.
+3. Tên nhóm peer; sau handoff cần export, clarification log và feedback thật để chấm GTS và viết v3.
 
-G1/G2 đạt kiểm tra cơ học. G3 thiếu report; G4 chưa freeze; G5 thiếu peer output; G6 chưa v3. Không nâng version, freeze hoặc đánh dấu hoàn tất các bước chưa có bằng chứng.
+Sau review nhóm, 5 khác biệt đã được ghi vào `06_calibration_report.csv`, guideline nâng v2 và gold được freeze. `lab9.py status` xác nhận G1–G4 đạt. G5 thiếu peer output/feedback thật; G6 chưa thể có v3 và GTS. Không tự tạo dữ liệu peer để vượt hai gate này.

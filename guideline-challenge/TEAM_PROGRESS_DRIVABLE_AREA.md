@@ -5,11 +5,13 @@
 - [x] Anh xác nhận cả nhóm duyệt 8 ảnh AI-assisted, import CVAT và đối chiếu với thành viên khác.
 - [x] Kiểm tra offline manh.zip và AI ZIP; lưu số liệu tại project/06_offline_review_evidence.md.
 - [x] Hoàn thiện nội dung QA plan và bổ sung provenance/tình trạng setup; chưa coi threshold là đã đo đạt.
-- [ ] Nhận export cuối và quyết định từng bất đồng/cờ uncertainty.
-- [ ] Hoàn thiện calibration report bằng bằng chứng thật, rồi mới nâng v2 và freeze.
-- [ ] Nhận tên nhóm peer, thực hiện blind, nhận export/feedback, chấm GTS và viết v3.
+- [x] Chốt 5 bất đồng giữa export Mạnh và bản consensus đã được cả nhóm duyệt; lưu trong project/06_calibration_report.csv.
+- [x] Nâng guideline lên v2; hoàn thiện QA plan và 15 gold decisions.
+- [x] Freeze chính thức; tag gold-freeze tại commit d87fcd27e9df44e79ef1c104b28b2281d0cca81c.
+- [x] Tạo handoff/blind-pack.zip gồm 5 ảnh blind; đã kiểm CRC và xác nhận không lộ gold.
+- [ ] Nhận tên nhóm peer và export/feedback/clarification thật; chấm GTS và viết guideline v3.
 
-G1/G2 đạt kiểm tra cơ học; G3–G6 chưa hoàn tất. Bản AI-assisted không thay thế calibration độc lập. Không push/freeze trong lượt cập nhật này.
+G1–G4 đạt kiểm tra cơ học. G5–G6 chờ peer output; không tự tạo feedback/GTS/v3. Bản AI-assisted không thay thế calibration độc lập.
 
 Use this file as the shared checklist for the whole lab. Check a box only when the named output is saved in `project/`, committed where appropriate, and the responsible owner plus reviewer agree it is complete.
 
