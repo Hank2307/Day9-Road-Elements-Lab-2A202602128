@@ -20,8 +20,8 @@ Sample: BDD01
 Scene: Highway có nhánh exit và vùng gore kẻ chéo bên phải
 Observation: Vùng gore có cùng texture asphalt nhưng bị vạch chéo tách khỏi lane hợp lệ.
 Decision: IGNORE gore; LABEL các lane có thể đi bằng polygon riêng theo semantic.
-Expected: Không có polygon trên vùng kẻ chéo; path ego hiện tại là `areaType=direct`; nhánh exit chỉ là
-`areaType=alternative` nếu ego có thể chuyển vào hợp lệ.
+Expected: Không có polygon trên vùng kẻ chéo; path ego hiện tại là `area_type=direct`; nhánh exit chỉ là
+`area_type=alternative` nếu ego có thể chuyển vào hợp lệ.
 Rationale: Functional area và right-of-way quan trọng hơn màu bề mặt; include gore tạo free-space nguy hiểm.
 Common mistake: Tô toàn bộ asphalt và nối lane chính với nhánh exit qua vùng gore.
 Diversity: conflict / merge-split / critical-boundary
@@ -33,7 +33,7 @@ Sample: BDD02
 Scene: Giao lộ đô thị có crosswalk lớn và nhiều phương tiện
 Observation: Crosswalk phủ ngang phần mặt đường hợp lệ; bus và taxi che một phần boundary phía xa.
 Decision: LABEL phần crosswalk thuộc path đường; không extrapolate polygon qua vùng bị xe che khi mất bằng chứng.
-Expected: Polygon `drivable_area` đi qua phần crosswalk thuộc lane; `areaType` theo path direct/alternative; vùng
+Expected: Polygon `drivable_area` đi qua phần crosswalk thuộc lane; `area_type` theo path direct/alternative; vùng
 không chắc sau phương tiện dùng `needs_review` thay vì đoán.
 Rationale: Crosswalk thay đổi ưu tiên với người đi bộ nhưng vẫn là mặt đường phương tiện đi qua khi hợp lệ.
 Common mistake: Cắt polygon tại mọi vạch trắng hoặc tô xuyên qua bus/taxi tới boundary không nhìn thấy.
@@ -48,7 +48,7 @@ Observation: Vạch trắng tách travel lane khỏi vùng đỗ xe; nhiều đo
 Decision: LABEL travel lane; vùng parking chỉ là `alternative` khi hợp pháp tiếp cận và còn nhìn thấy; không vẽ
 xuyên qua xe đỗ.
 Expected: `direct` phủ travel lane của ego; polygon parking hợp lệ nếu có phải tách riêng và mang
-`areaType=alternative`; sidewalk/curb bị ignore.
+`area_type=alternative`; sidewalk/curb bị ignore.
 Rationale: Parking surface không phải priority path hiện tại và occluded ground không đủ bằng chứng geometry.
 Common mistake: Gộp parking lane vào direct hoặc suy diễn mặt đường dưới toàn bộ hàng xe đỗ.
 Diversity: conflict / parking / occlusion
@@ -96,12 +96,12 @@ CASE ID: DA-07
 Sample: BDD12
 Scene: Giao lộ nhiều làn với crosswalk, van lớn và lối vào trạm xăng
 Observation: Van che horizon; lối vào cơ sở tư nhân nối trực tiếp với mặt đường.
-Decision: LABEL các lane/crosswalk nhìn thấy; không tự coi driveway trạm xăng là alternative; ESCALATE nếu rule
-về access road chưa đủ phân xử.
-Expected: Polygon chính bám lane nhìn thấy và dừng khi mất evidence sau van; object mơ hồ có `needs_review=true`.
+Decision: LABEL các lane/crosswalk nhìn thấy; không tự coi driveway trạm xăng là alternative; dừng geometry tại
+phần boundary không còn quan sát được sau van.
+Expected: Polygon chính bám lane/crosswalk nhìn thấy và không extrapolate xuyên qua van.
 Rationale: Task đo vùng road network hợp lệ cho ego, không phải mọi bề mặt xe có thể vật lý chạy vào.
 Common mistake: Tô lối trạm xăng chỉ vì cùng asphalt hoặc kéo polygon tới horizon qua van.
-Diversity: intersection / occlusion / ambiguity / escalation
+Diversity: intersection / occlusion / access-road
 
 ---
 
@@ -121,12 +121,14 @@ Diversity: occlusion / critical / escalation
 CASE ID: DA-09
 Sample: BDD17
 Scene: Phố đô thị trời mưa với reflection, marking mờ và xe đỗ
-Observation: Nước và phản sáng làm giảm contrast của lane/curb nhưng một phần boundary vẫn quan sát được.
-Decision: LABEL theo evidence nhìn thấy; ESCALATE đoạn boundary không đủ tin cậy thay vì dựa vào màu asphalt.
-Expected: Polygon bám marking/curb còn thấy; `needs_review=true` nếu boundary quan trọng chỉ được suy đoán.
-Rationale: Low visibility dễ tạo geometry drift dù IoU tổng thể vẫn cao.
-Common mistake: Dùng reflection làm boundary hoặc kéo thẳng polygon qua đoạn marking mất hoàn toàn.
-Diversity: low_visibility / rain / ambiguity / escalation
+Observation: Nước và phản sáng làm giảm contrast; không có bằng chứng rõ về một vùng alternative riêng.
+Decision: LABEL direct theo evidence nhìn thấy; không tạo alternative chỉ vì mặt đường rộng; ESCALATE nếu boundary
+không đủ tin cậy.
+Expected: Có direct polygon bám marking/curb còn thấy; chỉ tạo alternative khi thấy region/lane tiếp cận hợp lệ;
+`needs_review=true` nếu quyết định còn phụ thuộc suy đoán.
+Rationale: Low visibility dễ tạo cả lỗi geometry lẫn false-positive alternative.
+Common mistake: Dùng reflection làm boundary hoặc tự tạo alternative từ vùng asphalt không có semantic evidence.
+Diversity: calibration / low_visibility / rain / ambiguity / escalation
 
 ---
 
@@ -156,12 +158,39 @@ Diversity: blind / low_visibility / ambiguity / escalation
 
 CASE ID: DA-12
 Sample: BDD24
-Scene: Phố hẹp có tuyết, snowbank lấn mặt đường, bus và xe che boundary
-Observation: Snowbank thu hẹp vùng đi được gần ego; phần xa bị traffic che gần như hoàn toàn.
+Scene: Phố hẹp có tuyết, snowbank lấn mặt đường và nhiều xe ở phía trước/hai bên
+Observation: Snowbank thu hẹp vùng đi được gần ego; xe và traffic phía xa che một phần boundary.
 Decision: IGNORE snowbank/curb và vật cản; LABEL chỉ phần road surface nhìn thấy còn hợp lệ.
 Expected: Direct polygon không cắt vào snowbank hay vehicle footprint; boundary mơ hồ cần `needs_review=true`.
 Rationale: Sai boundary gần ego là critical failure vì mô hình có thể lập path vào snowbank hoặc curb.
 Common mistake: Dùng road width thông thường để suy diễn qua snowbank và phương tiện.
 Diversity: blind / critical / occlusion / low_visibility
+
+---
+
+CASE ID: DA-13
+Sample: BDD21
+Scene: Đường cong với physical road edge bên phải và tín hiệu giao thông ở xa
+Observation: Chi tiết bên phải và cấu trúc đường phía xa không đủ rõ để kết luận có sidewalk hoặc intersection.
+Decision: LABEL theo road edge/lane evidence nhìn thấy; không suy diễn sidewalk hay intersection chỉ từ vật thể xa;
+ESCALATE nếu boundary phải dựa vào giả định.
+Expected: Polygon dừng hoặc bám evidence quan sát được; `needs_review=true` nếu annotator không phân biệt được
+barrier/curb/road edge; không tạo alternative nếu không thấy một region tiếp cận hợp lệ.
+Rationale: Downstream cần geometry có bằng chứng, không cần một road layout được tưởng tượng từ tín hiệu nhỏ/xa.
+Common mistake: Tự gán sidewalk/intersection hoặc kéo polygon tới cấu trúc xa không nhìn rõ.
+Diversity: reserve / ambiguity / small_far / escalation
+
+---
+
+CASE ID: DA-14
+Sample: BDD25
+Scene: Đại lộ chạng vạng với mặt đường ướt, nhiều làn và traffic dày
+Observation: Reflection và nhiều phương tiện làm giảm độ rõ của lane/boundary ở xa nhưng phần gần ego vẫn quan sát được.
+Decision: LABEL direct/alternative chỉ theo lane evidence còn thấy; không extrapolate qua truck/taxi và không mặc
+định đây là critical nếu boundary gần ego vẫn rõ.
+Expected: Polygon bám marking nhìn thấy, không phủ vehicle footprint; dùng `needs_review` cho phần xa không đủ evidence.
+Rationale: Ca này kiểm tra occlusion và low visibility, nhưng mức rủi ro thấp hơn các boundary gần ego ở BDD18/BDD24.
+Common mistake: Gọi mọi low-light case là critical hoặc kéo polygon xuyên qua traffic tới horizon.
+Diversity: blind / occlusion / low_visibility / severity-calibration
 
 ---

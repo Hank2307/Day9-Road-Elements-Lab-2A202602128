@@ -7,13 +7,13 @@ BDD16,example,edge;low_visibility,Vùng kẻ chéo và barrier dưới cầu min
 BDD04,calibration,edge;occlusion;conflict,Đo bất đồng về parking driveway curb và extrapolation sau xe đỗ
 BDD05,calibration,edge;conflict,Đo bất đồng tại merge và vùng gore kẻ chéo
 BDD07,calibration,edge;occlusion,Đo bất đồng boundary tại giao lộ có xe chạy và xe đỗ
-BDD12,calibration,edge;occlusion;ambiguity,Đo rule crosswalk driveway và horizon bị van che
+BDD12,calibration,edge;occlusion,Đo geometry crosswalk lối access và giới hạn polygon khi van che phía trước
 BDD13,calibration,edge;occlusion;critical,Direct path bị che nặng bởi xe tải và xe con
-BDD17,calibration,edge;low_visibility,Đo geometry khi trời mưa mặt đường phản sáng và marking mờ
+BDD17,calibration,edge;ambiguity;low_visibility,Đo có đủ bằng chứng tạo alternative hay chỉ có direct trong cảnh mưa
 BDD20,calibration,edge;conflict,Đo semantic parking lane là alternative hay ignore
-BDD23,calibration,edge;occlusion;low_visibility,Đo boundary trong cảnh tuyết và xe đỗ dày
+BDD23,calibration,edge;low_visibility,Đo ảnh hưởng tuyết nhẹ và xe đỗ tới boundary contrast
 BDD14,blind,normal,Kiểm tra rule cơ bản trên highway có boundary rõ
 BDD11,blind,edge;occlusion,Kiểm tra crosswalk curb và parked vehicles tại intersection
-BDD18,blind,edge;ambiguity;low_visibility,Kiểm tra night boundary và escalation khi thiếu bằng chứng
-BDD24,blind,edge;critical;occlusion;low_visibility,Kiểm tra snowbank occlusion và critical boundary gần ego
-BDD25,blind,edge;critical;occlusion;low_visibility,Kiểm tra direct alternative trong traffic dày trên mặt đường ướt
+BDD18,blind,edge;critical;ambiguity;low_visibility,Kiểm tra night boundary và escalation khi thiếu bằng chứng
+BDD24,blind,edge;critical;occlusion;low_visibility,Kiểm tra snowbank xe đỗ và critical boundary gần ego
+BDD25,blind,edge;occlusion;low_visibility,Kiểm tra geometry trong traffic dày trên mặt đường ướt mà không coi đây là critical chính
