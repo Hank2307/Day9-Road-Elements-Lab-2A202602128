@@ -1,6 +1,6 @@
 # Hướng dẫn khoanh vùng đường cho xe gắn camera — Drivable area
 
-**Version:** v2
+**Version:** v3
 
 <!--
 v0 = chưa có bản nháp. Đổi dòng Version ở trên thành v1 khi xong bản nháp đầu, v2 sau calibration, v3 sau blind
@@ -215,6 +215,17 @@ Ngoại lệ này không áp dụng khi chưa rõ chiều đi hoặc đã thấy
 dùng **Shape**, không dùng **Track** và không lấy ảnh trước/sau để đoán vùng bị che trong ảnh đang làm.
 
 ## 9. Ví dụ và cách luyện tập (Examples)
+
+### Bảng tra nhanh sau peer review
+
+| Dễ nhầm | Cách quyết định nhanh |
+|---|---|
+| Mặt đường rộng nhưng không có bằng chứng là lane cùng chiều/access hợp lệ | Không tự tạo `alternative`; giữ phần chắc chắn và dùng `image_escalate` nếu quyền đi/hướng đi chưa xác định |
+| Parking hay bike lane/buffer | Xe đỗ nằm trong dải → parking; dải hẹp nằm giữa travel lane và hàng xe đỗ → bike lane/buffer và là background |
+| Direct/alternative tại giao lộ | Làn ego nối thẳng nhìn rõ → `direct`; nhánh rẽ hợp lệ → `alternative`; không rõ làn nối tiếp → không đoán và escalate |
+| `needs_review` hay `image_escalate` | Biết vùng đi được nhưng chưa chắc biên/loại → vẽ + `needs_review`; chưa rõ chiều đi/quyền access/làn ego → không vẽ vùng nghi vấn + `image_escalate` có reason |
+
+Peer review không yêu cầu đổi ontology. Sai lệch vài pixel/điểm polygon được kiểm theo tolerance mục 3.9; semantic đúng không tự động miễn lỗi geometry vượt ngưỡng.
 
 ### Ví dụ theo mã ảnh
 

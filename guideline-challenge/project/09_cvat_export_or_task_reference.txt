@@ -4,7 +4,7 @@ Bổ sung 2026-09-26: Anh xác nhận import bộ AI-assisted thành công và c
 
 CVAT version: v2.74.1 tại http://localhost:8080
 Task calibration (tên, id): sanaka-calib-manh-v1 (Task ID: 14, Job ID: 14)
-Task bản cuối theo guideline v3 (tên, id) hoặc lý do không có: Chưa có vì guideline v3 chỉ được viết sau khi nhận export và feedback blind thật từ nhóm peer.
+Task bản cuối theo guideline v3 (tên, id) hoặc lý do không có: Không tạo task v3 mới do giới hạn thời gian; v3 chỉ bổ sung bảng tra nhanh từ peer feedback và không đổi schema. Task calibration v1 cùng export Mạnh vẫn là bằng chứng CVAT hiện có.
 File export đã nộp (đường dẫn trong repo): project/06_calibration_exports/manh.zip
 Guideline version dán trong Guide của task: v1
 Ghi chú cho người tiếp nhận: Task calibration hoàn thành 8 ảnh (BDD04, BDD05, BDD07, BDD12, BDD13, BDD17, BDD20, BDD23) theo guideline v1, export định dạng CVAT for images 1.1 không kèm ảnh.

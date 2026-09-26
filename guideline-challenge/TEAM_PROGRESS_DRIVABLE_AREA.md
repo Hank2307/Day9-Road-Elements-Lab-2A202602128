@@ -9,7 +9,9 @@
 - [x] Nâng guideline lên v2; hoàn thiện QA plan và 15 gold decisions.
 - [x] Freeze chính thức; tag gold-freeze tại commit d87fcd27e9df44e79ef1c104b28b2281d0cca81c.
 - [x] Tạo handoff/blind-pack.zip gồm 5 ảnh blind; đã kiểm CRC và xác nhận không lộ gold.
-- [ ] Nhận tên nhóm peer và export/feedback/clarification thật; chấm GTS và viết guideline v3.
+- [x] Nhận feedback từ nhóm Just For Fun; peer không báo sample vỡ hoặc lỗi nghiêm trọng.
+- [x] Viết guideline v3 với bảng tra nhanh theo góp ý peer.
+- [ ] Không có export CVAT trong repo nên không tạo transfer score/GTS giả; nếu Lab Coach yêu cầu điểm thì phải xin lại export.
 
 G1–G4 đạt kiểm tra cơ học. G5–G6 chờ peer output; không tự tạo feedback/GTS/v3. Bản AI-assisted không thay thế calibration độc lập.
 
