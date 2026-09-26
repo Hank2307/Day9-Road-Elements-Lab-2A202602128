@@ -1,0 +1,44 @@
+{
+  "description": "Nhãn thử do trợ lý khoanh trên ảnh gốc để minh họa guideline v1; chưa qua QA, không phải ground truth BDD100K. Tọa độ tính bằng pixel trên ảnh 1280 × 720, gốc ở góc trên trái.",
+  "images": [
+    {
+      "id": "BDD01", "width": 1280, "height": 720,
+      "polygons": [
+        {"area_type": "direct", "needs_review": false, "points": [[480,357],[635,357],[807,549],[738,544],[620,539],[537,540],[350,551],[230,565]]},
+        {"area_type": "alternative", "needs_review": true, "points": [[0,413],[49,399],[91,382],[117,369],[126,350],[280,328],[505,328],[480,357],[230,565],[0,583]], "reason": "Phần làn trái phía xa dừng bảo thủ ở đoạn còn phân biệt rõ mặt đường; cần kiểm tra tính đầy đủ."},
+        {"area_type": "alternative", "needs_review": true, "points": [[641,301],[654,297],[681,311],[730,331],[816,361],[930,395],[1064,433],[1279,492],[1279,583],[1070,554],[888,551],[807,549],[635,357],[621,337],[613,322]], "reason": "Kiểm tra biên làn sát vùng vạch chéo và đoạn phía xa."}
+      ],
+      "badges": [{"text":"direct","x":495,"y":444},{"text":"alternative","x":105,"y":469},{"text":"alternative","x":903,"y":485}],
+      "callouts": [{"text":"Vùng vạch chéo: không tô","x":818,"y":98,"anchor":[989,389]},{"text":"Dừng trước xe cùng làn","x":216,"y":123,"anchor":[565,357]}],
+      "notes": ["direct dừng trước SUV; hai phía cùng chiều được minh họa bằng alternative.","Chừa thân xe, mui xe, vùng vạch chéo. Biên cam đứt: cần kiểm tra lại phần alternative."]
+    },
+    {
+      "id": "BDD04", "width": 1280, "height": 720,
+      "polygons": [
+        {"area_type": "direct", "needs_review": true, "points": [[574,413],[606,396],[671,390],[706,396],[710,409],[760,434],[810,455],[870,487],[928,514],[800,523],[650,533],[500,545],[365,559],[471,479],[521,445]], "reason": "Biên phải chuyển từ vỉa hè sang hàng xe đỗ không có vạch; cần QA xác nhận đường bao."}
+      ],
+      "badges": [{"text":"direct","x":585,"y":466}],
+      "callouts": [{"text":"Bên kia vạch vàng: không tô","x":64,"y":138,"anchor":[293,481]},{"text":"Chừa xe đỗ và vỉa hè","x":834,"y":163,"anchor":[780,414]}],
+      "notes": ["direct nằm bên phải vạch vàng, chừa xe đỗ và vỉa hè. Không suy đoán thêm alternative.","Biên phải không có vạch rõ: needs_review = true; đây là đường bao thử để thảo luận."]
+    },
+    {
+      "id": "BDD10", "width": 1280, "height": 720,
+      "polygons": [
+        {"area_type": "direct", "needs_review": false, "points": [[641,417],[770,417],[796,452],[842,525],[913,628],[969,709],[826,697],[628,685],[425,681],[302,684],[420,584],[585,460]]}
+      ],
+      "badges": [{"text":"direct","x":601,"y":556}],
+      "callouts": [{"text":"Dải xe đạp: không tô","x":845,"y":151,"anchor":[965,544]},{"text":"Làn ngược chiều: không tô","x":44,"y":152,"anchor":[440,483]},{"text":"Dừng trước xe bạc","x":479,"y":99,"anchor":[716,417]}],
+      "notes": ["direct ở giữa vạch vàng và mép trong vạch trắng bên phải; dừng trước xe bạc.","Không tô dải xe đạp, hàng xe đỗ, làn ngược chiều hoặc mui xe gắn camera."]
+    },
+    {
+      "id": "BDD17", "width": 1280, "height": 720,
+      "polygons": [
+        {"area_type": "direct", "needs_review": true, "points": [[479,294],[574,294],[612,322],[657,355],[693,381],[735,413],[408,412],[432,380],[457,341]], "reason": "Vạch phân chia mờ và phản chiếu do mưa; cần kiểm tra biên của làn ego."},
+        {"area_type": "alternative", "needs_review": true, "points": [[589,282],[610,282],[620,286],[677,285],[695,274],[746,277],[802,290],[862,307],[867,320],[887,333],[940,342],[1059,343],[1152,375],[1245,414],[735,413],[693,381],[657,355],[612,322],[574,294]], "reason": "Cần kiểm tra biên phải và phần đường nhìn thấy quanh các xe trong điều kiện mưa."}
+      ],
+      "badges": [{"text":"direct","x":479,"y":353},{"text":"alternative","x":772,"y":363}],
+      "callouts": [{"text":"Giá đỡ ở ngoài vùng direct","x":42,"y":38,"anchor":[181,230]},{"text":"Chừa xe đỗ bên phải","x":821,"y":56,"anchor":[999,309]}],
+      "notes": ["direct dừng trước taxi; alternative ở làn bên phải, chừa các xe. Cả hai vùng cần kiểm tra.","Giá đỡ không chạm direct đã vẽ; needs_review ở đây do biên mờ và mặt đường phản chiếu."]
+    }
+  ]
+}
