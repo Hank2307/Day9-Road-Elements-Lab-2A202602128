@@ -3,3 +3,11 @@ build/
 __pycache__/
 *.pyc
 .DS_Store
+
+# Local team-management notes and practice-pack helper
+/TEAM_PROGRESS_DRIVABLE_AREA.md
+/PHAN_CONG_THANH_VIEN.md
+/HUONG_DAN_MANH_PULL_VA_CALIBRATION.md
+/BDD_IMAGE_SELECTION_RECOMMENDATION.md
+/DRIVABLE_AREA_TOPIC_REFERENCE.md
+/build_peer_practice.py
