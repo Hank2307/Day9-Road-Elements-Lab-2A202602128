@@ -9,7 +9,7 @@ merge, curb, island và occlusion.
 ## Downstream contract
 
 1. **User:** Nhóm phát triển/QA mô hình nhận thức không gian lái và lập kế hoạch đường đi cho xe hỗ trợ lái/tự hành.
-2. **Output:** Polygon `drivable_area`; attribute `areaType=direct|alternative`; checkbox `needs_review`. Không tạo
+2. **Output:** Polygon `drivable_area`; attribute `area_type=direct|alternative`; checkbox `needs_review`. Không tạo
    polygon `background`.
 3. **Critical failure:** Include sidewalk/median/island/vật cản hoặc vùng không có right-of-way vào `direct`; bỏ sót
    `direct` gần ego/intersection; hoặc gán sai `direct`/`alternative`.
@@ -22,7 +22,7 @@ merge, curb, island và occlusion.
   thể tiếp cận hợp lệ bằng chuyển lane/rẽ/merge; crosswalk trên mặt đường; vùng rời dùng polygon riêng.
 - **Ignore:** Sidewalk, curb, median, island, vegetation, barrier, vật cản, private/non-road surface, vùng bị cấm,
   background và phần sau occlusion/horizon không đủ bằng chứng.
-- **Geometry:** Bám curb, road edge, island hoặc lane division; sai lệch khoảng ≤5 px tại boundary rõ. Không yêu cầu
+- **Geometry:** Bám curb, road edge, island hoặc lane division; sai lệch tối đa 10 px ở nửa dưới ảnh và 20 px ở nửa trên (đoạn nối giao lộ tối đa 30 px). Không yêu cầu
   pixel-perfect nhưng không cắt vùng excluded, tự giao, nối giả vùng rời hay extrapolate quá vùng quan sát được.
 
 ## Output chấm được

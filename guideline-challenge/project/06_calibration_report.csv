@@ -1,1 +1,6 @@
 sample_id,item,values_by_annotator,diagnosis,action,rule_change
+BDD05,alternative tại gore,"manh=1 alternative ở vùng phải; consensus=không vẽ alternative",guideline_gap,revise_rule,"Gore và vùng chỉ tiếp cận bằng cách cắt qua gore luôn là background"
+BDD12,alternative phía phải gần curb và lối trạm xăng,"manh=1 alternative phía phải; consensus=không vẽ vùng thiếu bằng chứng",data_ambiguity,add_escalation,"Không suy ra alternative từ asphalt rộng hoặc driveway; thiếu bằng chứng hướng/access thì không vẽ và image_escalate"
+BDD20,bike-buffer và parking phía phải,"manh=2 alternative; consensus=không vẽ alternative",guideline_gap,add_example,"Dải hẹp ngoài vạch trắng với xe đỗ nằm bên ngoài là bike lane hoặc buffer nên background"
+BDD07,biên direct và alternative quanh xe phía trước,"manh=2 polygon kéo thấp và rộng hơn; consensus=2 polygon dừng bảo thủ sau xe",execution_error,coaching,"Nhắc lại direct dừng ở cản sau xe cùng làn và alternative phải chừa footprint xe đỗ"
+BDD23,alternative cạnh hàng xe đỗ,"manh=1 alternative bên trái; consensus=không vẽ alternative",data_ambiguity,add_escalation,"Không có bằng chứng lane cùng chiều hoặc khoảng parking đủ dài thì không vẽ vùng nghi vấn và ghi reason"

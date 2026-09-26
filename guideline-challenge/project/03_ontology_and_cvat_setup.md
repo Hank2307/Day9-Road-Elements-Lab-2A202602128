@@ -26,7 +26,7 @@ Nếu thiết lập giá trị mặc định của `area_type` là `direct`, ng�
 ## CVAT
 
 - **Phiên bản CVAT** (`make cvat-status`): CVAT v2.74.1 tại `http://localhost:8080`
-- **Tên task calibration** (có version guideline, ví dụ `team07-calib-v1`): `k4-l2-day09-calib-v1-manh`
+- **Tên task calibration** (có version guideline, ví dụ `team07-calib-v1`): `sanaka-calib-manh-v1` (Task ID 14; Job ID 14 theo bản ghi của Mạnh)
 - **Guide của task đã dán `02_guideline.md`?**: Có (toàn bộ nội dung guideline v1 của Danh đã được dán vào phần Description / Guide của task trên CVAT).
 - **Nhóm dùng Track hay Shape, vì sao:** Nhóm dùng **Shape**. Lý do: Bộ dữ liệu BDD100K bao gồm 26 ảnh tĩnh độc lập được chụp tại các địa điểm và bối cảnh khác nhau (không phải video sequence liên tục như LISA). Do đó, mỗi polygon trên từng ảnh là một instance hình học riêng lẻ (Shape), không cần liên kết hay nội suy qua các frame thời gian (Track).
 

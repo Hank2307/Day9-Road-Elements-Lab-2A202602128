@@ -1,6 +1,6 @@
 # Review bản nháp AI — Anh / sanaka
 
-**Không phải calibration độc lập, không phải GT. Chưa được người duyệt.**
+**Không phải calibration độc lập, không phải GT. Theo Anh, cả bốn thành viên đã review/pass, import vào CVAT và đối chiếu với export của Mạnh.**
 
 Xanh lá = direct; xanh dương = alternative. Mọi polygon có needs_review=true.
 Ảnh gốc không bị sửa. Tọa độ XML/JSON dùng ảnh gốc 1280×720; thanh tiêu đề chỉ nằm trong ảnh preview.

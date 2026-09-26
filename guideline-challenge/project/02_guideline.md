@@ -1,6 +1,6 @@
 # Hướng dẫn khoanh vùng đường cho xe gắn camera — Drivable area
 
-**Version:** v1
+**Version:** v2
 
 <!--
 v0 = chưa có bản nháp. Đổi dòng Version ở trên thành v1 khi xong bản nháp đầu, v2 sau calibration, v3 sau blind
@@ -201,6 +201,14 @@ Ngoại lệ này không áp dụng khi chưa rõ chiều đi hoặc đã thấy
   Một ảnh trống do không nhìn rõ phải có tag và lý do, không được trông giống ảnh đã kiểm tra xong và không có vùng
   phù hợp.
 
+### Bổ sung sau calibration nội bộ — v2
+
+- **Gore không phải alternative:** một vùng chỉ tiếp cận được bằng cách cắt qua vùng vạch chéo vẫn là background; không vẽ polygon trên gore hoặc phần đường bị gore cô lập. BDD05 là ví dụ calibration cho rule này.
+- **Không suy ra lane từ khoảng asphalt rộng:** chỉ tạo `alternative` khi có bằng chứng về một vùng/làn cùng chiều và có thể tiếp cận. Curb lane, driveway, khoảng sát trạm xăng hoặc vùng cạnh hàng xe đỗ không tự động là alternative. BDD12 và BDD23 là các ví dụ calibration.
+- **Dải ngoài vạch trắng cạnh hàng xe đỗ:** nếu là dải hẹp và xe đỗ nằm ngoài dải thì đó là bike lane/buffer → background. Không biến toàn bộ dải này thành parking alternative. BDD20 là ví dụ calibration.
+- **Ranh xe phía trước quan trọng hơn việc tô kín:** `direct` dừng ở cản/bánh sau của xe cùng làn; không kéo tới horizon hoặc nối quanh xe để làm polygon lớn hơn. Với alternative có xe chiếm chỗ thì chừa footprint xe và chỉ vẽ phần nhìn thấy có bằng chứng.
+- Các khác biệt về biên không được giải quyết chỉ bằng IoU. Reviewer kiểm riêng lỗi lấn làn ngược chiều/gore/sidewalk/vật cản và semantic `area_type`.
+
 ## 8. Có cần theo dõi qua nhiều ảnh không? (Temporal rule)
 
 **Không dùng cho bài này.** Đây là các ảnh đứng yên, không phải bài theo dõi xe trong video. Xét từng ảnh độc lập,
@@ -211,7 +219,7 @@ dùng **Shape**, không dùng **Track** và không lấy ảnh trước/sau đ�
 ### Ví dụ theo mã ảnh
 
 Các ảnh dưới đây đã được **khoanh thử trên ảnh gốc** để bạn dễ hình dung. Đây là bản minh họa theo guideline v1,
-**chưa qua người kiểm tra chất lượng (QA), không phải đáp án chuẩn của BDD100K**. Biên đang cần kiểm tra có thể
+**đã được nhóm review cho mục đích guideline nhưng không phải đáp án chuẩn của BDD100K**. Biên đang cần kiểm tra có thể
 được chỉnh lại sau lượt làm thử; không dùng các ảnh này để chấm độ chính xác theo pixel.
 
 **Cách đọc màu:** xanh lá = `direct`; xanh dương = `alternative`; đường viền cam đứt = `needs_review = true`
