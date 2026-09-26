@@ -32,6 +32,10 @@ Nếu thiết lập giá trị mặc định của `area_type` là `direct`, ng�
 
 ## Setup test
 
+### Bổ sung bằng chứng offline / review nhóm — 2026-09-26
+
+Theo Anh, bộ 8 ảnh AI-assisted đã được cả nhóm duyệt, import CVAT và đối chiếu với thành viên khác. Bản XML/ZIP gốc nằm tại `../ai_drafts/anh_calibration_v1/`; chưa nhận export cuối từ CVAT. Kết quả kiểm tra hai export và khác biệt nằm trong `06_offline_review_evidence.md`. Không thay thế bài độc lập của Mạnh hoặc tuyên bố trợ lý đã chạy CVAT. Hai tên task trong tài liệu này và file 09 đang khác nhau; cần xác nhận tên task thực tế, không tự đổi ID.
+
 - **Người thực hiện kiểm thử:** Danh (Guideline Lead) đã mở task kiểm thử độc lập mà không nhận giải thích miệng từ người dựng task (Mạnh).
 - **Kết quả kiểm thử:**
   - **Công cụ:** Danh nhận diện ngay công cụ *Draw new polygon* với nhãn `drivable_area`.

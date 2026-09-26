@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='utf-8'?>
+<annotations>
+  <version>1.1</version>
+  <image id="0" name="BDD04.jpg" width="1280" height="720">
+    <polygon label="drivable_area" source="auto" occluded="0" z_order="0" points="366,558;451,487;523,438;569,413;595,391;670,391;709,410;760,435;818,470;897,511;718,527;530,544">
+      <attribute name="area_type">direct</attribute>
+      <attribute name="needs_review">true</attribute>
+    </polygon>
+    <tag label="image_escalate" source="auto">
+      <attribute name="reason">Chưa xác nhận khoảng trống sát curb có đủ điều kiện parking alternative; chưa vẽ vùng nghi vấn.</attribute>
+    </tag>
+  </image>
+  <image id="1" name="BDD05.jpg" width="1280" height="720">
+    <polygon label="drivable_area" source="auto" occluded="0" z_order="0" points="51,581;281,478;439,405;505,375;630,375;678,426;759,505;866,594;665,579;421,568;210,572">
+      <attribute name="area_type">direct</attribute>
+      <attribute name="needs_review">true</attribute>
+    </polygon>
+  </image>
+  <image id="2" name="BDD07.jpg" width="1280" height="720">
+    <polygon label="drivable_area" source="auto" occluded="0" z_order="0" points="383,562;521,335;664,335;734,391;834,468;940,558;753,552;550,554">
+      <attribute name="area_type">direct</attribute>
+      <attribute name="needs_review">true</attribute>
+    </polygon>
+    <polygon label="drivable_area" source="auto" occluded="0" z_order="0" points="664,335;768,341;858,375;1014,430;1279,516;1279,586;1110,566;940,558;834,468;734,391">
+      <attribute name="area_type">alternative</attribute>
+      <attribute name="needs_review">true</attribute>
+    </polygon>
+  </image>
+  <image id="3" name="BDD12.jpg" width="1280" height="720">
+    <polygon label="drivable_area" source="auto" occluded="0" z_order="0" points="460,470;588,307;719,307;755,336;930,499;746,484;578,475">
+      <attribute name="area_type">direct</attribute>
+      <attribute name="needs_review">true</attribute>
+    </polygon>
+    <polygon label="drivable_area" source="auto" occluded="0" z_order="0" points="44,478;164,427;332,347;418,307;588,307;460,470;307,468;163,470">
+      <attribute name="area_type">alternative</attribute>
+      <attribute name="needs_review">true</attribute>
+    </polygon>
+    <tag label="image_escalate" source="auto">
+      <attribute name="reason">Dải sát curb bên phải có thể là parking/buffer hoặc lane; chưa đủ chắc khả năng tiếp cận, chưa vẽ alternative ở đó.</attribute>
+    </tag>
+  </image>
+  <image id="4" name="BDD13.jpg" width="1280" height="720">
+    <polygon label="drivable_area" source="auto" occluded="0" z_order="0" points="256,549;380,440;438,405;864,405;962,450;1193,575;1040,553;845,534;642,531;437,537">
+      <attribute name="area_type">direct</attribute>
+      <attribute name="needs_review">true</attribute>
+    </polygon>
+    <tag label="image_escalate" source="auto">
+      <attribute name="reason">Bề rộng vùng bên phải pickup không chứng minh có lane cùng chiều riêng; chưa tạo alternative, cần xác nhận quy tắc biên parking tại đây.</attribute>
+    </tag>
+  </image>
+  <image id="5" name="BDD17.jpg" width="1280" height="720">
+    <polygon label="drivable_area" source="auto" occluded="0" z_order="0" points="410,409;488,297;570,297;603,335;675,411;543,409">
+      <attribute name="area_type">direct</attribute>
+      <attribute name="needs_review">true</attribute>
+    </polygon>
+    <polygon label="drivable_area" source="auto" occluded="0" z_order="0" points="570,297;597,281;683,281;732,310;837,359;945,412;799,410;675,411;603,335">
+      <attribute name="area_type">alternative</attribute>
+      <attribute name="needs_review">true</attribute>
+    </polygon>
+    <tag label="image_escalate" source="auto">
+      <attribute name="reason">Biên parking phía phải không rõ; chỉ vẽ phần chắc hơn của lane cạnh ego, bỏ vùng sát curb chưa xác định.</attribute>
+    </tag>
+  </image>
+  <image id="6" name="BDD20.jpg" width="1280" height="720">
+    <polygon label="drivable_area" source="auto" occluded="0" z_order="0" points="266,554;380,490;489,423;569,369;590,350;622,350;683,416;772,507;859,574;698,574;655,567;614,578;513,580;507,564;489,547;458,537;416,532;374,531;332,535;297,544">
+      <attribute name="area_type">direct</attribute>
+      <attribute name="needs_review">true</attribute>
+    </polygon>
+  </image>
+  <image id="7" name="BDD23.jpg" width="1280" height="720">
+    <polygon label="drivable_area" source="auto" occluded="0" z_order="0" points="64,683;221,589;358,510;447,459;514,428;541,424;585,425;624,429;669,455;738,493;791,535;849,579;905,631;938,653;791,657;630,672;453,675;239,679">
+      <attribute name="area_type">direct</attribute>
+      <attribute name="needs_review">true</attribute>
+    </polygon>
+    <tag label="image_escalate" source="auto">
+      <attribute name="reason">Không có vạch giữa đường rõ: cần xác nhận đây là một lane di chuyển hợp lệ, và biên giữa lane với parking ở vùng tối; polygon là giả thuyết cần review.</attribute>
+    </tag>
+  </image>
+</annotations>

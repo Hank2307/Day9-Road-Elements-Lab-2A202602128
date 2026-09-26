@@ -1,5 +1,7 @@
 CVAT task reference — thay mọi placeholder mới là xong.
 
+Bổ sung 2026-09-26: Anh xác nhận import bộ AI-assisted thành công và cả nhóm đã review/đối chiếu. File tương thích CVAT for images 1.1: ai_drafts/anh_calibration_v1/anh-ai-draft-cvat.zip (tính từ guideline-challenge/). Đây là file sinh offline, không phải export mới tải về sau review. Chưa có tên/ID task import và export cuối; xem project/06_offline_review_evidence.md. Tên task Mạnh bên dưới khác tên ghi tại file 03, cần đối chiếu thực tế; không tự sửa ID.
+
 CVAT version: v2.74.1 tại http://localhost:8080
 Task calibration (tên, id): sanaka-calib-manh-v1 (Task ID: 14, Job ID: 14)
 Task bản cuối theo guideline v3 (tên, id) hoặc lý do không có: Chưa có (sẽ được tạo sau khi chốt guideline v3 và blind handoff)

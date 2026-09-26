@@ -2,15 +2,18 @@
 
 Điền trước phút 15. Thay mọi placeholder; còn sót thì `make status` báo ở gate G1.
 
-- **Team:** TODO (ví dụ `team07`)
-- **Nhóm peer test bài của mình:** TODO (cặp A ↔ B; số nhóm lẻ thì ring 3 nhóm A → B → C → A — Lab Coach công bố)
-- **Nhóm mình test bài của:** TODO
-- **Problem family:** TODO (xem README mục "1 · Chọn bài toán")
-- **Nguồn ảnh:** TODO (`bdd100k`, `gtsdb`, `lisa` — chỉ dùng ảnh trong `data/`)
+- **Team:** sanaka
+- **Nhóm peer test bài của mình:** Chưa được Lab Coach công bố
+- **Nhóm mình test bài của:** Chưa được Lab Coach công bố
+- **Problem family:** Drivable area — phân biệt vùng `direct` và `alternative` theo khả năng di chuyển hợp lệ của ego vehicle
+- **Nguồn ảnh:** `bdd100k` — chỉ dùng ảnh có sẵn trong `data/bdd100k/`
 
-| Thành viên | GitHub | Vai trò chính | File phụ trách |
-|---|---|---|---|
-| TODO | TODO | TODO | TODO |
+| Thành viên | MSSV | GitHub | Vai trò chính | File phụ trách |
+|---|---:|---|---|---|
+| Phạm Hoàng Anh | 02299 | `Hank2307` | Team Leader · integration · QA | `00_team.md`, `01_problem_statement.md`, `05_qa_plan.md`, `07_blind_handoff/`, kiểm tra gate và nộp bài |
+| Tống Thanh Danh | 02128 | `danhtongAI11` | Guideline Lead | `02_guideline.md`, `06_calibration_report.csv`, `08_revision_log.md` |
+| Lê Đức Mạnh | 02122 | `ManhLD424` | Ontology & CVAT Lead | `03_ontology_and_cvat_setup.md`, `03_cvat_labels.json`, `09_cvat_export_or_task_reference.txt` |
+| Chu Thái Hoà | 02083 | `chuthaihoa-ai` | Data & Edge-case Lead · Gold Keeper | `sample_pack.csv`, `04_edge_cases/` |
 
 Gợi ý chia vai (nhóm 2–3 người thì gộp): **spec owner** (`01`, `02`), **CVAT owner** (`03_*`, `sample_pack.csv`,
 `09`), **gold owner** (`04_edge_cases/`), **QA owner** (`05`, `06`, `07_blind_handoff/`). Mỗi file một người sửa
