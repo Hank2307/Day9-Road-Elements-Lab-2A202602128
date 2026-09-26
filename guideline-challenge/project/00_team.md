@@ -3,8 +3,8 @@
 Điền trước phút 15. Thay mọi placeholder; còn sót thì `make status` báo ở gate G1.
 
 - **Team:** sanaka
-- **Nhóm peer test bài của mình:** Chưa được Lab Coach công bố
-- **Nhóm mình test bài của:** Chưa được Lab Coach công bố
+- **Nhóm peer test bài của mình:** Just For Fun (JFF), theo xác nhận của Team Leader
+- **Nhóm mình test bài của:** Just For Fun (JFF), Traffic light state + ego relevance
 - **Problem family:** Drivable area — phân biệt vùng `direct` và `alternative` theo khả năng di chuyển hợp lệ của ego vehicle
 - **Nguồn ảnh:** `bdd100k` — chỉ dùng ảnh có sẵn trong `data/bdd100k/`
 

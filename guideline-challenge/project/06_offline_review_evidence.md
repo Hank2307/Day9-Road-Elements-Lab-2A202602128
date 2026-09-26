@@ -35,6 +35,6 @@ IoU tính trên union polygon theo từng area_type, tọa độ liên tục. Kh
 
 1. Export CVAT cuối sau review vẫn nên lưu nếu có; bản consensus được giữ rõ nguồn AI-assisted.
 2. Các export độc lập còn lại nếu có. Không tạo file mang tên thành viên bằng cách sao chép AI output.
-3. Tên nhóm peer; sau handoff cần export, clarification log và feedback thật để chấm GTS và viết v3.
+3. Peer là Just For Fun; đã nhận feedback và 5 ảnh, lưu tại `07_blind_handoff/`. Chưa có export độc lập và xác nhận số câu hỏi để tính GTS.
 
-Sau review nhóm, 5 khác biệt đã được ghi vào `06_calibration_report.csv`, guideline nâng v2 và gold được freeze. `lab9.py status` xác nhận G1–G4 đạt. G5 thiếu peer output/feedback thật; G6 chưa thể có v3 và GTS. Không tự tạo dữ liệu peer để vượt hai gate này.
+Sau review nhóm, 5 khác biệt đã được ghi vào `06_calibration_report.csv`, guideline nâng v2 và gold được freeze. Hiện guideline đã lên v3 dựa trên feedback JFF. G1–G4 đạt kiểm tra cơ học; G5/G6 thiếu bằng chứng định lượng/export độc lập. Xem SUBMISSION_NOTES.md và 07_blind_handoff/visual_review.md.

@@ -27,7 +27,7 @@ merge, curb, island và occlusion.
 
 ## Output chấm được
 
-Blind test chấm từ export CVAT: sự hiện diện/số polygon; vùng excluded không có polygon; `areaType`; boundary và
+Blind test chấm từ export CVAT: sự hiện diện/số polygon; vùng excluded không có polygon; `area_type`; boundary và
 tách vùng; `needs_review=true` khi không đủ bằng chứng.
 
 ## Dữ liệu và giới hạn
