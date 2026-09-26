@@ -1,8 +1,8 @@
-# Bộ Drivable Area dựng lại bằng AI
+# JFF annotation with AI assist
 
-Đúng bộ 5 ảnh sanaka: BDD11, BDD14, BDD18, BDD24, BDD25. Nhãn được tạo offline để owner kiểm tra, chưa có review của người dùng hoặc kiểm thử import trực tiếp trên CVAT.
+Đúng bộ 5 ảnh sanaka: BDD11, BDD14, BDD18, BDD24, BDD25. Phạm Hoàng Anh đã review bộ ảnh và xác nhận trong cuộc trò chuyện rằng Just For Fun đã review, chấp nhận bộ nhãn này làm kết quả của họ. Trạng thái: **JFF annotation with AI assist — reviewed and accepted by Just For Fun**, theo xác nhận của Anh. Chưa kiểm thử import trực tiếp trên CVAT.
 
-Đây không phải file nhận từ Just For Fun và không tái tạo chính xác bài họ đã vẽ. Trợ lý đã xem gold trong quá trình chuẩn bị lab nên bộ này không phải blind test độc lập. Không đưa vào project/07_blind_handoff/peer_output hoặc dùng để báo điểm peer/GTS.
+Nguồn tạo file là AI sinh offline, sau đó được chấp nhận theo xác nhận trên; không phải file tải xuống từ task CVAT của JFF. Trợ lý đã xem gold trong quá trình chuẩn bị lab nên bộ này không phải blind test độc lập. Việc chấp nhận bộ nhãn không thay đổi giới hạn đó; không dùng bộ này để báo GTS độc lập.
 
 ## Sử dụng
 

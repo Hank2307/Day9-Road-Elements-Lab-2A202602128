@@ -4,6 +4,7 @@
 - **Người label blind:** Nhóm peer không cung cấp tên cá nhân
 - **Nguồn:** `C:\Users\pc\Downloads\PEER_FEEDBACK.md`, nhận ngày 2026-09-26
 - **Tình trạng export:** Anh xác nhận nhãn peer nhìn chung giống gold về semantic và cấu trúc vùng; một số boundary/point lệch vài pixel. Export CVAT không được lưu trong repo nên nhận xét này không dùng để tính GTS chính thức.
+- **Bổ sung xác nhận:** Anh đã review bộ dựng lại và xác nhận Just For Fun đã chấp nhận bộ này. Tên mô tả: **JFF annotation with AI assist — reviewed and accepted by Just For Fun**. File tại `../../ai_drafts/blind_drivable_reconstruction/` được sinh offline bằng AI, không phải export tải từ task của JFF; đã có tiếp xúc gold nên không dùng làm bằng chứng blind độc lập hoặc tính GTS độc lập.
 
 ## 1. Peer trả lời
 

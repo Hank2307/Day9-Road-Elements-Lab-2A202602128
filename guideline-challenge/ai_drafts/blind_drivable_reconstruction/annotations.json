@@ -1,5 +1,5 @@
 {
- "provenance":"AI-generated reconstruction for owner review; not an export received from Just For Fun. The assistant has previously seen owner gold decisions; not an independent blind test.",
+ "provenance":"JFF annotation with AI assist - reviewed and accepted by Just For Fun, as confirmed by Pham Hoang Anh in this conversation. Originally generated offline by AI; the assistant had previously seen owner gold decisions, so this is not an independent blind test.",
  "images":[
   {"id":"BDD11","reason":"Không rõ khả năng rẽ vào phần đường ngang tại mép ảnh; chỉ vẽ corridor ego có bằng chứng.","polygons":[{"type":"direct","points":[[320,597],[540,446],[591,403],[644,357],[681,355],[726,367],[763,386],[797,410],[895,480],[1073,592],[868,600],[621,599],[457,597]]}]},
   {"id":"BDD14","reason":"Biên làn phía xa bị traffic che; chỉ khoanh phần nhìn thấy, kiểm tra các mảnh alternative xa chưa được vẽ.","polygons":[{"type":"direct","points":[[86,670],[318,486],[377,457],[608,457],[698,526],[860,654],[659,649],[475,658],[288,663]]},{"type":"alternative","points":[[0,412],[176,397],[277,392],[328,393],[342,403],[407,405],[443,405],[465,448],[377,457],[318,486],[86,670],[0,681]]},{"type":"alternative","points":[[608,457],[654,420],[818,469],[1004,527],[1279,609],[1279,683],[1084,665],[860,654],[698,526]]}]},
