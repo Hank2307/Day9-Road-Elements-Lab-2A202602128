@@ -1,8 +1,8 @@
 CVAT task reference — thay mọi placeholder mới là xong.
 
-CVAT version: TODO
-Task calibration (tên, id): TODO
-Task bản cuối theo guideline v3 (tên, id) hoặc lý do không có: TODO
-File export đã nộp (đường dẫn trong repo): TODO
-Guideline version dán trong Guide của task: TODO
-Ghi chú cho người tiếp nhận: TODO
+CVAT version: v2.74.1 tại http://localhost:8080
+Task calibration (tên, id): sanaka-calib-manh-v1 (Task ID: 14, Job ID: 14)
+Task bản cuối theo guideline v3 (tên, id) hoặc lý do không có: Chưa có (sẽ được tạo sau khi chốt guideline v3 và blind handoff)
+File export đã nộp (đường dẫn trong repo): project/06_calibration_exports/manh.zip
+Guideline version dán trong Guide của task: v1
+Ghi chú cho người tiếp nhận: Task calibration hoàn thành 8 ảnh (BDD04, BDD05, BDD07, BDD12, BDD13, BDD17, BDD20, BDD23) theo guideline v1, export định dạng CVAT for images 1.1 không kèm ảnh.
