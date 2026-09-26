@@ -1,0 +1,3 @@
+Validated offline: 5 images, 9 polygons, 5 escalation tags; geometry valid, no overlaps, bounds and enums valid; XML parses and ZIP CRC passes.
+02_guideline.md SHA256 a16a8f9e35a45014ffbebc65019cb2e624ab9ccbaea01d05adcaf35f242edc68
+03_cvat_labels.json SHA256 15cf7969e86c0b37e80f35d61d518a56a0bf129b93d5f3a4d575d5c72cdd5bbc

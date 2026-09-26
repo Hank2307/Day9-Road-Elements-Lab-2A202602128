@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='utf-8'?>
+<annotations>
+  <version>1.1</version>
+  <!--AI-generated reconstruction for owner review; not an export received from Just For Fun. The assistant has previously seen owner gold decisions; not an independent blind test.-->
+  <image id="0" name="BDD11.jpg" width="1280" height="720">
+    <polygon label="drivable_area" source="auto" occluded="0" z_order="0" points="320,597;540,446;591,403;644,357;681,355;726,367;763,386;797,410;895,480;1073,592;868,600;621,599;457,597">
+      <attribute name="area_type">direct</attribute>
+      <attribute name="needs_review">true</attribute>
+    </polygon>
+    <tag label="image_escalate" source="auto">
+      <attribute name="reason">Không rõ khả năng rẽ vào phần đường ngang tại mép ảnh; chỉ vẽ corridor ego có bằng chứng.</attribute>
+    </tag>
+  </image>
+  <image id="1" name="BDD14.jpg" width="1280" height="720">
+    <polygon label="drivable_area" source="auto" occluded="0" z_order="0" points="86,670;318,486;377,457;608,457;698,526;860,654;659,649;475,658;288,663">
+      <attribute name="area_type">direct</attribute>
+      <attribute name="needs_review">true</attribute>
+    </polygon>
+    <polygon label="drivable_area" source="auto" occluded="0" z_order="0" points="0,412;176,397;277,392;328,393;342,403;407,405;443,405;465,448;377,457;318,486;86,670;0,681">
+      <attribute name="area_type">alternative</attribute>
+      <attribute name="needs_review">true</attribute>
+    </polygon>
+    <polygon label="drivable_area" source="auto" occluded="0" z_order="0" points="608,457;654,420;818,469;1004,527;1279,609;1279,683;1084,665;860,654;698,526">
+      <attribute name="area_type">alternative</attribute>
+      <attribute name="needs_review">true</attribute>
+    </polygon>
+    <tag label="image_escalate" source="auto">
+      <attribute name="reason">Biên làn phía xa bị traffic che; chỉ khoanh phần nhìn thấy, kiểm tra các mảnh alternative xa chưa được vẽ.</attribute>
+    </tag>
+  </image>
+  <image id="2" name="BDD18.jpg" width="1280" height="720">
+    <polygon label="drivable_area" source="auto" occluded="0" z_order="0" points="533,515;558,466;584,418;607,385;631,378;676,388;730,411;805,443;951,511;828,511;705,514">
+      <attribute name="area_type">direct</attribute>
+      <attribute name="needs_review">true</attribute>
+    </polygon>
+    <tag label="image_escalate" source="auto">
+      <attribute name="reason">Ảnh đêm: biên xa và hướng áp dụng của vùng bên trái chưa đủ rõ. Không suy ra alternative hoặc kéo polygon tới horizon.</attribute>
+    </tag>
+  </image>
+  <image id="3" name="BDD24.jpg" width="1280" height="720">
+    <polygon label="drivable_area" source="auto" occluded="0" z_order="0" points="74,548;178,480;267,435;332,415;467,415;480,443;507,465;553,481;622,496;696,510;761,539;813,574;889,611;716,600;563,584;400,570;225,558">
+      <attribute name="area_type">direct</attribute>
+      <attribute name="needs_review">true</attribute>
+    </polygon>
+    <tag label="image_escalate" source="auto">
+      <attribute name="reason">Biên tuyết bên phải không sắc nét; giữ phần mặt đường nhìn thấy và dừng trước xe trắng cùng làn.</attribute>
+    </tag>
+  </image>
+  <image id="4" name="BDD25.jpg" width="1280" height="720">
+    <polygon label="drivable_area" source="auto" occluded="0" z_order="0" points="423,573;527,451;568,390;610,348;666,347;699,387;755,452;842,560;685,562;548,566">
+      <attribute name="area_type">direct</attribute>
+      <attribute name="needs_review">true</attribute>
+    </polygon>
+    <polygon label="drivable_area" source="auto" occluded="0" z_order="0" points="6,626;128,506;290,410;454,357;566,331;592,332;610,348;568,390;527,451;423,573;240,596">
+      <attribute name="area_type">alternative</attribute>
+      <attribute name="needs_review">true</attribute>
+    </polygon>
+    <polygon label="drivable_area" source="auto" occluded="0" z_order="0" points="699,387;757,393;789,403;932,403;1025,459;1060,493;1060,562;944,559;842,560;755,452">
+      <attribute name="area_type">alternative</attribute>
+      <attribute name="needs_review">true</attribute>
+    </polygon>
+    <tag label="image_escalate" source="auto">
+      <attribute name="reason">Mặt đường ướt và traffic che lane phía xa; biên chia làn nội suy cần kiểm tra. Bỏ vùng sát taxi phải khi không rõ lane/parking.</attribute>
+    </tag>
+  </image>
+</annotations>
