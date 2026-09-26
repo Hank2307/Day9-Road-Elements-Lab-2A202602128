@@ -22,6 +22,8 @@ JFF cung cấp 5 câu trả lời và 5 ảnh có nhãn qua Team Leader, không 
 
 ## Đường dẫn đọc nhanh
 
+Team Leader xác nhận quên ghi lại chi tiết đánh giá; trạng thái từng phần được ghi tại `07_blind_handoff/assessment_record.md`. Các mục không có bằng chứng ghi N/A hoặc không được ghi lại, không thay bằng điểm ước lượng.
+
 1. `02_guideline.md` và `03_cvat_labels.json`.
 2. `06_calibration_report.csv`, `06_offline_review_evidence.md`.
 3. `07_blind_handoff/peer_feedback_original.md`, `peer_feedback.md`, `visual_review.md`, `peer_images/`.
