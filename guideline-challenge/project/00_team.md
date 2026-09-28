@@ -11,7 +11,7 @@
 | Thành viên | MSSV | GitHub | Vai trò chính | File phụ trách |
 |---|---:|---|---|---|
 | Phạm Hoàng Anh | 02299 | `Hank2307` | Team Leader · integration · QA | `00_team.md`, `01_problem_statement.md`, `05_qa_plan.md`, `07_blind_handoff/`, kiểm tra gate và nộp bài |
-| Tống Thanh Danh | 02128 | `danhtongAI11` | Guideline Lead | `02_guideline.md`, `06_calibration_report.csv`, `08_revision_log.md` |
+| Tống Thanh Danh | 02128 | `thanhdanh11-test` | Guideline Lead | `02_guideline.md`, `06_calibration_report.csv`, `08_revision_log.md` |
 | Lê Đức Mạnh | 02122 | `ManhLD424` | Ontology & CVAT Lead | `03_ontology_and_cvat_setup.md`, `03_cvat_labels.json`, `09_cvat_export_or_task_reference.txt` |
 | Chu Thái Hoà | 02083 | `chuthaihoa-ai` | Data & Edge-case Lead · Gold Keeper | `sample_pack.csv`, `04_edge_cases/` |
 
